@@ -8,13 +8,13 @@ ENV['VAGRANT_DEFAULT_PROVIDER'] = 'docker'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
-  config.vm.define 'apache_server' do |node|          
+  config.vm.define 'docker_host_vm' do |node|          
     
     node.vm.provider "docker" do |d|
       d.vagrant_vagrantfile = __FILE__.sub(%r{docker_container/Vagrantfile$},'host_vm/VagrantFile')
       d.build_dir = "."
       d.remains_running = true
-      d.name = 'example_exampler'
+      d.name = 'apache_container'
       d.ports = ['8080:80']
     end
     
