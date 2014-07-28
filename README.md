@@ -6,7 +6,7 @@ Workaround example for making Docker Vgrant provider behave around the current b
 ## Usage
 
 ```
-git clone git@github.com:lynxbat/boot2docker-fixie-example.git
+git clone git@github.com:AlexanderAllen/boot2docker-fixie-example.git
 cd boot2docker-fixie-example/docker_container
 vagrant up
 ```
