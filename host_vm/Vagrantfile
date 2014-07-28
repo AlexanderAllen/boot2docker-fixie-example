@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'vmware_fusion'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "box-cutter/ubuntu1404"
+  config.vm.box = "alexanderallen/centos-6.5-x86_64-minimal"
   config.vm.provision "docker",
-      images: ["ubuntu"]
+      images: ["centos"]
 end
